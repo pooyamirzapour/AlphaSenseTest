@@ -18,6 +18,7 @@ public class ContinuousSubArray {
                 sum = sum - array[backIndex];
                 backIndex++;
             } else {
+                if (frontIndex<=array.length-1)
                 sum = sum + array[frontIndex];
                 frontIndex = index + 1;
                 if (frontIndex > array.length)

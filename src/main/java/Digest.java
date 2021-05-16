@@ -24,11 +24,11 @@ public abstract class Digest {
                         result = doDigest(input);
                         cache.put(input, result);
                     } catch (RuntimeException ex) {
-                        //fixme: Line 26: This is just a common log error, for understanding the cause it should be like below :
+                        //fixme: Line 30: This is just a common log error, for understanding the cause it should be like below :
                         // LoggerFactory.getLogger(Digest.class).error(ex.getMessage() , ExceptionUtils.getStackTrace(ex));
                         LoggerFactory.getLogger("Digest").error("Unable to make digest");
 
-                        //fixme: Line 31: For raising the exception it is better translate the RuntimeException to a meaningful
+                        //fixme: Line 34: For raising the exception it is better translate the RuntimeException to a meaningful
                         // or defining a specific Checked Exception like below
                         // throw new ServiceException(ex) or throw new DigestException(ex);
                         throw ex;

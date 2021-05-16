@@ -7,12 +7,13 @@ public class ContinuousSubArray {
     }
 
     public static boolean isExist(int[] array, int target) {
-        if (array == null || array.length == 0) {
+        if (array == null || array.length == 0 || Arrays.stream(array).anyMatch(p -> p < 0)) {
             throw new IllegalArgumentException("The given array is not valid");
         }
         if (target == 0) {
             return (Arrays.stream(array).anyMatch(p -> p == 0));
         }
+
         int sum = 0;
         int backIndex = 0;
         int frontIndex = 0;

@@ -18,6 +18,7 @@ public class ContinuousSubArrayTest {
         assertFalse(ContinuousSubArray.isExist(new int[]{1, 2, 3, 4, 5}, 0));
         assertTrue(ContinuousSubArray.isExist(new int[]{1, 2, 3, 0, 5}, 0));
         assertThrows(IllegalArgumentException.class, () -> ContinuousSubArray.isExist(null, 0));
+        assertThrows(IllegalArgumentException.class, () -> ContinuousSubArray.isExist(new int[]{1, 2, -1, 0, 5}, 0));
 
     }
 }
